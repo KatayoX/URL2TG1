@@ -26,9 +26,9 @@ async def thumb_creator(filepath):
         hei = int(video_stream['height'] if 'height' in video_stream else 0)
 
     try:
-        duration = float(video_stream["duration"]) / 2
+        duration = float(video_stream["duration"]) // 2
     except:
-        duration = 9
+        duration = 120
 
     out_file = filepath + ".jpg"
     
